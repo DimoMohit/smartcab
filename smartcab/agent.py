@@ -23,11 +23,11 @@ class LearningAgent(Agent):
         # Set any additional class parameters as needed
         self.t = 0
         self.state_def = [
-            ['left', 'right', 'forward'],       #waypoint
-            ['red', 'green'],                   #light
-            ['left', 'right', 'forward', None], #vehicleleft
-            ['left', 'right', 'forward', None], #vehicleright
-            ['left', 'right', 'forward', None]  #vehicleoncoming
+            ['turn_left', 'turn_right', 'move_forward', 'move_backward'], #waypoint
+            ['red', 'green'],                                             #light
+            ['turn_left', 'turn_right', 'move_forward', None],            #Input left
+            ['turn_left', 'turn_right', 'move_forward', None],            #Input right
+            ['turn_left', 'turn_right', 'move_forward', None]             #Oncoming
         ]
 
         self.template_q = dict((k, 0.0) for k in self.valid_actions)
